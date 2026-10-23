@@ -1,0 +1,147 @@
+/* --- Base Reset & Typography --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+    background-color: #0b0815; /* Matches the front mountain layer */
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+}
+
+/* --- Parallax Container --- */
+.parallax-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-layer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let clicks pass through to layers below */
+    will-change: transform; /* Hardware acceleration for smooth scrolling */
+}
+
+/* --- Layer Styles (CSS Art) --- */
+.sky {
+    background: linear-gradient(to bottom, #2b1055, #7597de);
+    z-index: 1;
+}
+
+.sun {
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(145deg, #ffde00, #ff8c00);
+    border-radius: 50%;
+    box-shadow: 0 0 80px #ff8c00;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: auto;
+    z-index: 2;
+}
+
+/* Using oversized overlapping ovals to simulate rolling hills/mountains */
+.mountain-back {
+    background: #36175e;
+    width: 150vw;
+    height: 60vh;
+    border-radius: 50% 50% 0 0;
+    left: -25vw;
+    bottom: -10vh;
+    z-index: 3;
+}
+
+.mountain-mid {
+    background: #17153B;
+    width: 130vw;
+    height: 45vh;
+    border-radius: 50% 50% 0 0;
+    left: -10vw;
+    bottom: -5vh;
+    z-index: 5;
+}
+
+.mountain-front {
+    background: #0b0815;
+    width: 110vw;
+    height: 30vh;
+    border-radius: 50% 50% 0 0;
+    left: -5vw;
+    bottom: 0;
+    z-index: 6;
+}
+
+/* --- Typography Layer --- */
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4; /* Sandwiched between mid and back mountains */
+}
+
+.text h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 6rem;
+    text-align: center;
+    line-height: 1.1;
+    color: #fff;
+    text-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+    transform: translateY(-10vh); /* Push it up slightly */
+}
+
+/* --- Content Section --- */
+.content {
+    position: relative;
+    z-index: 10;
+    background-color: #0b0815;
+    padding: 100px 10%;
+    min-height: 100vh;
+}
+
+.content section {
+    max-width: 800px;
+    margin: 0 auto 150px auto;
+}
+
+.content h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #e0d8f0;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #a39eb8;
+}
+
+/* --- Scroll Reveal Animations --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text h1 { font-size: 3.5rem; }
+    .content h2 { font-size: 2rem; }
+    .sun { width: 150px; height: 150px; }
+}

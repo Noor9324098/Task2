@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Life Extraordinary - Parallax Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load elegant fonts similar to high-end editorial sites -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Parallax Hero Section -->
+    <header class="parallax-container">
+        <!-- The data-speed attribute dictates how fast the layer moves. 
+             Lower = slower (further back), Higher = faster (closer) -->
+        <div class="parallax-layer sky" data-speed="0.1"></div>
+        <div class="parallax-layer sun" data-speed="0.3"></div>
+        <div class="parallax-layer mountain-back" data-speed="0.5"></div>
+        <div class="parallax-layer text" data-speed="0.7">
+            <h1>A Life <br>Extraordinary</h1>
+        </div>
+        <div class="parallax-layer mountain-mid" data-speed="0.85"></div>
+        <div class="parallax-layer mountain-front" data-speed="1.1"></div>
+    </header>
+
+    <!-- Magazine-style Content Section -->
+    <main class="content">
+        <section class="reveal">
+            <h2>Immersive Depth</h2>
+            <p>
+                By breaking the landscape into multiple layers and moving them at varying speeds 
+                based on the user's scroll position, we create an optical illusion of depth. 
+                This transforms a flat web page into a dynamic, 3D-like experience.
+            </p>
+        </section>
+
+        <section class="reveal">
+            <h2>Elegance in Motion</h2>
+            <p>
+                Taking inspiration from high-end design, combining smooth hardware-accelerated 
+                transforms with beautiful typography creates a memorable digital journey. 
+                Scroll down to see the content gracefully reveal itself.
+            </p>
+        </section>
+        
+        <section class="reveal">
+            <h2>Seamless Transitions</h2>
+            <p>
+                The foreground layer moves in tandem with the content container below, 
+                bridging the gap between the interactive hero section and the informative 
+                editorial reading experience.
+            </p>
+        </section>
+    </main>
+
+    <!-- Load the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

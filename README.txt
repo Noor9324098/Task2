@@ -1,15 +1,14 @@
 Task2
 
 This repository contains a static website built with:
-- task2.html
+- index.html
 - task2.css
 - task2.js
 
 GitHub Pages Deployment
-- Deployment is automated with GitHub Actions using:
-  .github/workflows/deploy-pages.yml
-- Any push to the main branch triggers deployment to GitHub Pages.
+- Published directly from the main branch root (/).
+- GitHub Pages serves index.html as the site entrypoint.
 
 Live Site
-- After the first workflow run succeeds, the site is available at:
+- Site URL:
   https://noor9324098.github.io/Task2/
